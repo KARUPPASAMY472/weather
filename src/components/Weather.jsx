@@ -51,7 +51,7 @@ const Weather = () => {
       {error && <p className="text-red-600 mb-4 font-semibold">{error}</p>}
 
       {weather && (
-        <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
+        <div className="bg-gray-650 bg-opacity-70 backdrop-blur-md rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
           <h2 className="text-3xl font-bold mb-2">{weather.name}, {weather.sys.country}</h2>
           
           {/* Weather Icon */}
