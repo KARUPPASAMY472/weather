@@ -52,7 +52,7 @@ const Weather = () => {
 
       {weather && (
         <div className="bg-gray-650 bg-opacity-70 backdrop-blur-md rounded-2xl shadow-lg p-6 w-full max-w-md text-center">
-          <h2 className="text-3xl font-bold mb-2">{weather.name}, {weather.sys.country}</h2>
+          <h2 className="text-3xl font-bold mb-2 text-blue-500">{weather.name}, {weather.sys.country}</h2>
           
           {/* Weather Icon */}
           <img
@@ -60,10 +60,12 @@ const Weather = () => {
             alt={weather.weather[0].description}
             className="mx-auto"
           />
-          <p className="text-xl font-semibold">{weather.weather[0].main}</p>
-          <p className="text-lg">Temperature: {weather.main.temp}°C</p>
-          <p className="text-lg">Humidity: {weather.main.humidity}%</p>
-          <p className="text-lg">Wind: {weather.wind.speed} m/s</p>
+          <p className="text-2xl text[red] font-semibold">{weather.weather[0].main}</p>
+          <div className=" flex bg-gray-100 my-6 p-2 rounded-lg ">
+          <p className="text-lg text-red-600">Temperature: {weather.main.temp}°C</p>
+          <p className="text-lg text-slate-900">Humidity: {weather.main.humidity}%</p>
+            <p className="text-lg text-blue-600">Wind: {weather.wind.speed} m/s</p>
+            </div>
         </div>
       )}
     </div>
